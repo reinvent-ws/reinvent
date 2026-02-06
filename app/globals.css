@@ -1,6 +1,12 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+.madimi-one-regular {
+  font-family: 'Madimi_One';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap !important;
+  src: url(/public/fonts/Madimi_One/MadimiOne-Regular.ttf) format('ttf');
+}
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -30,4 +36,35 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.css-selector {
+  background: linear-gradient(270deg, #262e32, #74787a, #262e32);
+  background-size: 600% 600%;
+
+  -webkit-animation: AnimationName 30s ease infinite;
+  -moz-animation: AnimationName 30s ease infinite;
+  -o-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:0% 51%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 51%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:0% 51%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 51%}
+}
+@-o-keyframes AnimationName {
+  0%{background-position:0% 51%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 51%}
+}
+@keyframes AnimationName {
+  0%{background-position:0% 51%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 51%}
 }
