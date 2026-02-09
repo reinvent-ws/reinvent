@@ -17,7 +17,7 @@ export const HeaderMain = (() => {
                     height={50}
                 />
                 <div>
-                <p className={`${fontStyle.className} tracking-[8.7px]`}>REINVENT</p>
+                <p className={`${fontStyle.className} tracking-[9.4px]`}>REINVENT</p>
                 <p className='tracking-[10.5px]'>web studio</p>
                 </div>
             </div>
