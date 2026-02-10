@@ -1,37 +1,39 @@
 import Image from 'next/image'
-import job from './../../public/react-programmer.png'
 import react from './../../public/react-logo.png'
 import react_native from './../../public/react-native-logo.png'
 import ts from './../../public/typescript-logo.png'
 import js from './../../public/javascript-logo.png'
 import { PropSectorCard } from '../types/all-types'
 
+import { Righteous } from 'next/font/google'
+const fontStyle = Righteous( {weight: '400', subsets: ['latin-ext']} )
+
 export const SectorCard = (({role, job_img, gradFrom, gradTo, domains}: PropSectorCard) => {
 
     return (
         <section className='flex w-fit h-[277.5px] border-[1px] border-white/5 overflow-hidden shadow-xl rounded-lg'>
-            <div className="flex justify-center items-center w-[140px] bg-[#00000020]">
-                <p className='text-[30px] text-center font-bold -rotate-90'>{role}</p>
+            <div className="relative w-[140px] bg-[#00000030]">
+                <p className={`${fontStyle.className} absolute -right-[45px] top-10 text-right text-[32px] text-[#ffffff70] text-shadow-lg z-1`}>{role}</p>
             </div>
-            <div className={`flex w-[500px] bg-linear-to-l from-[${gradFrom}75] to-[${gradTo}75]`}>
+            <div className={`flex w-[500px] bg-linear-to-r from-[#a67998] to-[#688eb3]`}>
                 <div className="relative p-4 flex-1">
                     <Image
                         src={job_img}
                         alt=''
-                        width={240}
-                        height={240}
-                        className='absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]'
+                        width={260}
+                        height={260}
+                        className='absolute bottom-0 left-10 grayscale z-0'
                     />
-                    <div className="absolute bottom-0 left-0 w-full h-[75px] bg-[#00000035] backdrop-blur-xl flex p-4 gap-2 text-[9px]">
+                    <div className="absolute bottom-0 left-0 w-full h-[75px] bg-[#00000035] backdrop-blur flex p-4 gap-2 text-[9px]">
                         {domains.map((domain, idx) => (
                             <section key={idx} className='w-fit h-full flex flex-1 gap-1 flex-col justify-center '>
-                                <div className='flex gap-4 items-center'>
+                                <div className='flex gap-1 items-center'>
                                     <Image
                                         src={react}
                                         alt=''
                                         width={20}
                                         height={20}
-                                        />
+                                    />
                                     <p>{domain.domain}</p>
                                 </div>
                                 <p className='font-extralight'>{domain.description}</p>

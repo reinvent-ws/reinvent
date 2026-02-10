@@ -16,11 +16,11 @@ export const domains1: PropDomains[] = [
     icon: './../../public/typescript-logo.png',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do elusmod'
   },
-  {
-    domain: 'Javascript',
-    icon: './../../public/javascript-logo.png',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do elusmod'
-  }
+  // {
+  //   domain: 'Javascript',
+  //   icon: './../../public/javascript-logo.png',
+  //   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do elusmod'
+  // }
 ]
 
 export const domains2: PropDomains[] = [

@@ -7,7 +7,6 @@ export const HeaderMain = (() => {
     var alt: any = 'Reinvent Web Studio'
 
     return (
-        <>
         <div className="flex w-full h-[50px] justify-between items-center">
             <div className='flex items-center gap-3 text-black invert'>
                 <Image
@@ -37,7 +36,6 @@ export const HeaderMain = (() => {
                 </svg>
                 </div>
             </div>
-            </div>
-        </>
+        </div>
     )
 })
