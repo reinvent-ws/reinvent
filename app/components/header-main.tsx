@@ -1,6 +1,6 @@
-import { Michroma } from "next/font/google";
 import Image from "next/image"
 
+import { Michroma } from "next/font/google";
 const fontStyle = Michroma( {weight: '400', subsets: ['latin-ext']});
 
 export const HeaderMain = (() => {
