@@ -1,6 +1,35 @@
 import { PropDomains } from "../types/all-types"
 
-export const domains1: PropDomains[] = [
+import job from './../../public/cms-logo.png'
+import job1 from './../../public/react-programmer.png'
+import job3 from './../../public/graphic-design.png'
+
+export const menuList = ['Home', 'Serviços', 'Sobre Nós', 'Contato']
+
+export const domain0: PropDomains[] = [
+  {
+    domain: 'Node.js',
+    icon: 'https://www.golden-team.org/static/services/reactjs.webp',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+  },
+  {
+    domain: 'Express',
+    icon: 'https://www.golden-team.org/static/services/reactjs.webp',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+  },
+  {
+    domain: 'Swagger',
+    icon: 'https://cdn-icons-png.flaticon.com/256/5968/5968381.png',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+  },
+  {
+    domain: 'Typescript',
+    icon: 'https://cdn.iconscout.com/icon/free/png-256/free-javascript-logo-icon-svg-download-png-2284965.png?f=webp',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+  }
+]
+
+export const domain1: PropDomains[] = [
   {
     domain: 'React',
     icon: 'https://www.golden-team.org/static/services/reactjs.webp',
@@ -23,7 +52,7 @@ export const domains1: PropDomains[] = [
   }
 ]
 
-export const domains2: PropDomains[] = [
+export const domain2: PropDomains[] = [
   {
     domain: 'Figma',
     icon: 'https://cdn-icons-png.flaticon.com/256/5968/5968705.png',
@@ -41,7 +70,7 @@ export const domains2: PropDomains[] = [
   }
 ]
 
-export const domains3: PropDomains[] = [
+export const domain3: PropDomains[] = [
 
   {
     domain: 'Adobe Illustrator',
@@ -58,4 +87,35 @@ export const domains3: PropDomains[] = [
     icon: 'https://cdn-public.softwarereviews.com/production/favicons/offerings/2092/original/Download-CorelDRAW-Graphics-Suite-2023-v24.4.0.636.png',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do elusmod'
   }
+]
+
+export const sectorsCard = [
+  {
+    role:'CMS',
+    job_img: job,
+    domain: domain0,
+    gradFrom:'#e4a346',
+    gradTo:'#2d6f73'
+  },
+  {
+    role:'Software Develpment',
+    job_img: job1,
+    domain: domain1,
+    gradFrom:'#3f5a87',
+    gradTo:'#ac445d'
+  },
+  {
+    role:'Web Design',
+    job_img: 'https://cdn3d.iconscout.com/3d/premium/thumb/designer-grafico-3d-icon-png-download-4849606.png',
+    domain: domain2,
+    gradFrom: '#942b3a',
+    gradTo:'#662a46'
+  },
+  {
+    role:'Graphic Design',
+    job_img: job3,
+    domain: domain3,
+    gradFrom: '#942b3a',
+    gradTo:'#662a46'
+  },
 ]

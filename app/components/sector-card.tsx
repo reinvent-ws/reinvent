@@ -1,15 +1,15 @@
 import Image from 'next/image'
 import { PropSectorCard } from '../types/all-types'
 
-import { Righteous } from 'next/font/google'
-const fontStyle = Righteous( {weight: '400', subsets: ['latin-ext']} )
+import { Wire_One } from 'next/font/google'
+const fontStyle = Wire_One( {weight: '400', subsets: ['latin']} )
 
 export const SectorCard = (({role, job_img, gradFrom, gradTo, domains}: PropSectorCard) => {
 
     return (
-        <section className='flex w-fit h-[277.5px] border-[1px] border-white/5 overflow-hidden shadow-xl rounded-tr-2xl rounded-bl-2xl'>
+        <section className='flex w-fit h-[277.5px] border-[1px] border-white/5 overflow-hidden shadow-xl rounded-2xl'>
             <div className="relative w-[140px] -bg-linear-135 from-[#511e3d] to-[#9b2d38]">
-                <p className={`${fontStyle.className} absolute -right-[40px] top-10 text-right text-[32px] text-[#ffffff95] text-shadow-lg`}>{role}</p>
+                <p className={`${fontStyle.className} absolute -right-[30px] top-10 text-right text-[55px] text-[#ffffff95] text-shadow-lg leading-14 font-black`}>{role}</p>
             </div>
             <div className={`flex w-[500px] bg-linear-to-r from-[#a67998] to-[#688eb3]`}>
                 <div className="relative p-4 flex-1">
@@ -18,7 +18,7 @@ export const SectorCard = (({role, job_img, gradFrom, gradTo, domains}: PropSect
                         alt=''
                         width={260}
                         height={260}
-                        className='absolute bottom-4 left-10 grayscale'
+                        className='absolute bottom-4 left-10 grayscale opacity-50'
                     />
                     <div className="absolute bottom-0 left-0 w-full h-[75px] bg-[#00000035] backdrop-blur flex p-4 gap-2">
                         {domains.map((domain, idx) => (
