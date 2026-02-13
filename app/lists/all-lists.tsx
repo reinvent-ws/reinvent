@@ -9,22 +9,22 @@ export const menuList = ['Home', 'Serviços', 'Sobre Nós', 'Contato']
 export const domain0: PropDomains[] = [
   {
     domain: 'Node.js',
-    icon: 'https://www.golden-team.org/static/services/reactjs.webp',
+    icon: 'https://cdn.iconscout.com/icon/free/png-256/free-node-js-logo-icon-svg-download-png-3030179.png',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
   },
   {
     domain: 'Express',
-    icon: 'https://www.golden-team.org/static/services/reactjs.webp',
+    icon: 'https://farbodshabani.github.io/portfolio/assets/images/icons/expressIcon.png',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
   },
   {
     domain: 'Swagger',
-    icon: 'https://cdn-icons-png.flaticon.com/256/5968/5968381.png',
+    icon: 'https://svgstack.com/media/img/swagger-logo-xTUe014050.webp',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
   },
   {
-    domain: 'Typescript',
-    icon: 'https://cdn.iconscout.com/icon/free/png-256/free-javascript-logo-icon-svg-download-png-2284965.png?f=webp',
+    domain: 'JSON',
+    icon: 'https://i0.wp.com/chewbii.com/wp-content/uploads/2015/11/json-logo.png?fit=650%2C650&ssl=1',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
   }
 ]

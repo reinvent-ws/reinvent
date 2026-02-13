@@ -20,7 +20,11 @@ const nextConfig = {
             'cdn-icons-png.flaticon.com',
             'cdn3d.iconscout.com',
             'upload.wikimedia.org',
-            'chatgpt.com'
+            'chatgpt.com',
+            'svgstack.com',
+            'icon-icons.com',
+            'i0.wp.com',
+            'farbodshabani.github.io'
         ]
       },
 };
