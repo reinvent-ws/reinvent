@@ -7,7 +7,7 @@ const fontStyle = Wire_One( {weight: '400', subsets: ['latin']} )
 export const SectorCard = (({role, job_img, gradFrom, gradTo, domains}: PropSectorCard) => {
 
     return (
-        <section className='flex w-fit h-[277.5px] border-[1px] border-white/2.5 overflow-hidden shadow-xl rounded-xl'>
+        <section className='flex w-fit h-[277.5px] border-[1px] border-white/2.5 overflow-hidden shadow-xl'>
             <div className="relative w-[140px] bg-[#00000060]">
                 <p className={`${fontStyle.className} absolute -right-[30px] top-10 text-right text-[55px] text-[#ffffff] text-shadow-lg leading-14 font-black`}>{role}</p>
             </div>

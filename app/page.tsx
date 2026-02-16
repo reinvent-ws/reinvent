@@ -10,7 +10,7 @@ export default function Home() {
 
   return (
     <main className={`relative flex bg-no-repeat bg-cover bg-left min-h-screen flex-col items-center bg-[url('https://basicappleguy.com/s/Forage_Mac.png')]`}>
-      <div className={`relative flex-col flex-1 gap-24 px-[200px] py-10 w-full text-sm lg:flex bg-linear-to-l from-[#3a5a8950] to-[#ac445d50] overflow-hidden backdrop-blur-3xl text-white bg-no-repeat bg-center-top bg-auto`}>
+      <div className={`relative flex-col flex-1 gap-24 max-sm:px-[20px] max-lg:px-[60px] py-10 w-full text-sm lg:flex overflow-hidden backdrop-blur-3xl text-white bg-no-repeat bg-center-top bg-auto`}>
         <HeaderMain />
         <div className="flex gap-8 flex-wrap justify-center">
           {sectorsCard.map((str) => (

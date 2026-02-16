@@ -39,7 +39,7 @@ export const HeaderMain = (() => {
                 />
                 <div>
                     <p className={`${fontStyle.className} tracking-[9.4px]`}>REINVENT</p>
-                    <p className='tracking-[10.5px]'>web studio</p>
+                    <p className='tracking-[10.5px] max-[859px]:hidden'>web studio</p>
                 </div>
             </div>
             <div className="flex gap-6 pr-4 text-black">
