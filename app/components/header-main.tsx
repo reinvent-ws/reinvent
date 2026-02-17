@@ -29,7 +29,7 @@ export const HeaderMain = (() => {
 
     return (
         <div className="flex w-full h-[50px] justify-between items-center">
-            <div className='flex items-center gap-3 text-black'>
+            <div className='flex items-center gap-3 text-black invert'>
                 <Image
                     src='/rjr-logo-invert.png'
                     alt={alt}
@@ -41,12 +41,12 @@ export const HeaderMain = (() => {
                     <p className='tracking-[10.5px] max-[859px]:hidden'>web studio</p>
                 </div>
             </div>
-            <div className="flex items-center gap-6 pr-4 text-black">
+            <div className="flex items-center gap-6 pr-4 text-white/75">
                 <div className={`flex items-center gap-10 pr-2 tracking-widest max-lg:hidden`}>
                     {menus.map((menu: any, idx: number)=>(<p key={idx}>{menu}</p>))}
                 </div>
                 <FontAwesomeIcon icon={faBars} className="min-[1024px]:invisible"/>
-                <div className='flex items-center gap-6 pl-8 border-l-[1px] border-black text-black/50'>
+                <div className='flex items-center gap-6 pl-8 border-l-[1px] border-white/75'>
                     <ButtonHover
                         sendDM={darkMode}
                         getDM={(dark: boolean) => setDarkMode(dark)}
