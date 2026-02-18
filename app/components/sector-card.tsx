@@ -15,6 +15,7 @@ export const SectorCard = (({role, job_img, domains, open_menu}: PropSectorCard)
     const [openMiniMenu, setOpenMiniMenu] = useState<boolean>(open_menu)
 
     const styleIconsAside = 'w-[37.5px] h-[37.5px] flex border border-transparent flex items-center justify-center bg-[#ffffff20] cursor-pointer hover:text-white duration-300 ease-in-out'
+    const styleIcons = 'w-[37.5px] h-[37.5px] flex border border-transparent flex items-center justify-center bg-[#ffffff20] cursor-pointer'
 
     return (
         <section className='flex w-fit h-[277.5px] border-[1px] border-white/2.5 overflow-hidden shadow-xl rounded-tl-xl rounded-bl-xl'>
@@ -50,15 +51,17 @@ export const SectorCard = (({role, job_img, domains, open_menu}: PropSectorCard)
                 </div>
                 <div className='border border-transparent border-l-[#ffffff25] flex flex-col justify-between text-white/50'>
                     <div
-                        className={`relative ${styleIconsAside} border-b-[#ffffff25] cursor-pointer`}
+                        className={`relative ${styleIcons} border-b-[#ffffff25] cursor-pointer`}
                         onClick={() => setOpenMiniMenu(!openMiniMenu)}
                     >
                         {openMiniMenu ?
                         <FontAwesomeIcon icon={faAngleDown} size='sm'/>
                         :
-                        <FontAwesomeIcon icon={faAngleUp} size='sm'/>
+                        <>
+                            <FontAwesomeIcon icon={faAngleUp} size='sm'/>
+                            <MiniMenu />
+                        </>
                         }
-                        <MiniMenu />
                     </div>
                     <div>
                         <div className={`${styleIconsAside} border-t-[#ffffff25] text-white/15`}>
