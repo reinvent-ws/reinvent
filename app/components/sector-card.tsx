@@ -55,10 +55,10 @@ export const SectorCard = (({role, job_img, domains, open_menu}: PropSectorCard)
                         onClick={() => setOpenMiniMenu(!openMiniMenu)}
                     >
                         {openMiniMenu ?
-                        <FontAwesomeIcon icon={faAngleDown} size='sm'/>
+                        <FontAwesomeIcon icon={faAngleDown} size='sm' className='hover:text-white duration-300 easy-in-out'/>
                         :
                         <>
-                            <FontAwesomeIcon icon={faAngleUp} size='sm'/>
+                            <FontAwesomeIcon icon={faAngleUp} size='sm' className='hover:text-white duration-300 easy-in-out'/>
                             <MiniMenu />
                         </>
                         }
