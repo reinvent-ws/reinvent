@@ -5,15 +5,21 @@ import { Wire_One } from 'next/font/google'
 const fontStyle = Wire_One( {weight: '400', subsets: ['latin']} )
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleLeft, faAngleRight, faBars, faGrip, faGripLines } from '@fortawesome/free-solid-svg-icons'
+import { faAngleDown, faAngleLeft, faAngleRight, faAngleUp } from '@fortawesome/free-solid-svg-icons'
+import { useState } from 'react'
+import { MiniMenu } from './mini-menu'
 
 
-export const SectorCard = (({role, job_img, gradFrom, gradTo, domains}: PropSectorCard) => {
+export const SectorCard = (({role, job_img, domains, open_menu}: PropSectorCard) => {
+
+    const [openMiniMenu, setOpenMiniMenu] = useState<boolean>(open_menu)
+
+    const styleIconsAside = 'w-[37.5px] h-[37.5px] flex border border-transparent flex items-center justify-center bg-[#ffffff20] cursor-pointer hover:text-white duration-300 ease-in-out'
 
     return (
-        <section className='flex w-fit h-[277.5px] border-[1px] border-white/2.5 overflow-hidden shadow-xl'>
+        <section className='flex w-fit h-[277.5px] border-[1px] border-white/2.5 overflow-hidden shadow-xl rounded-tl-xl rounded-bl-xl'>
             <div className="relative w-[140px] bg-[#00000060]">
-                <p className={`${fontStyle.className} absolute -right-[30px] top-10 text-right text-[55px] text-[#ffffff] text-shadow-lg leading-14 font-black`}>{role}</p>
+                <p className={`${fontStyle.className} absolute -right-[30px] top-4 text-right text-[40px] text-[#ffffff] text-shadow-lg leading-14 font-black`}>{role}</p>
             </div>
             <div className={`flex w-[500px] bg-[#444]`}>
                 <div className="relative p-4 flex-1">
@@ -33,7 +39,7 @@ export const SectorCard = (({role, job_img, gradFrom, gradTo, domains}: PropSect
                                         alt=''
                                         width={20}
                                         height={20}
-                                        className='rounded'
+                                        className='rounded hover:grayscale-none ease-in transition-[0.2s]'
                                     />
                                     <p className='text-shadow-sm'>{domain.domain}</p>
                                 </div>
@@ -42,15 +48,23 @@ export const SectorCard = (({role, job_img, gradFrom, gradTo, domains}: PropSect
                         ))}
                     </div>
                 </div>
-                <div className='border border-transparent border-l-[#ffffff25] flex flex-col justify-between'>
-                    <div className='w-[37.5px] h-[37.5px] flex border border-transparent border-b-[#ffffff25] flex items-center justify-center bg-[#ffffff20]'>
-                        <FontAwesomeIcon icon={faGripLines} size='sm'/>
+                <div className='border border-transparent border-l-[#ffffff25] flex flex-col justify-between text-white/50'>
+                    <div
+                        className={`relative ${styleIconsAside} border-b-[#ffffff25] cursor-pointer`}
+                        onClick={() => setOpenMiniMenu(!openMiniMenu)}
+                    >
+                        {openMiniMenu ?
+                        <FontAwesomeIcon icon={faAngleDown} size='sm'/>
+                        :
+                        <FontAwesomeIcon icon={faAngleUp} size='sm'/>
+                        }
+                        <MiniMenu />
                     </div>
                     <div>
-                        <div className='w-[37.5px] h-[37.5px] flex border border-transparent border-t-[#ffffff25] flex items-center justify-center bg-[#ffffff20]'>
+                        <div className={`${styleIconsAside} border-t-[#ffffff25] text-white/15`}>
                             <FontAwesomeIcon icon={faAngleLeft} size='sm'/>
                         </div>
-                        <div className='w-[37.5px] h-[37.5px] flex border border-transparent border-t-[#ffffff25] flex items-center justify-center bg-[#ffffff20]'>
+                        <div className={`${styleIconsAside} border-t-[#ffffff25]`}>
                             <FontAwesomeIcon icon={faAngleRight} size='sm'/>
                         </div>
                     </div>

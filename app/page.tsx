@@ -18,8 +18,7 @@ export default function Home() {
               role={str.role}
               job_img={str.job_img}
               domains={str.domain}
-              gradFrom={str.gradFrom}
-              gradTo={str.gradTo}
+              open_menu={str.open_menu}
             />
           ))}
         </div>

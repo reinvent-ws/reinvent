@@ -9,7 +9,6 @@ export interface PropDomains {
 export type PropSectorCard = {
     role: string,
     job_img?: any,
-    gradFrom: ElementType | any,
-    gradTo: ElementType | any,
     domains: PropDomains[]
+    open_menu: boolean
 }

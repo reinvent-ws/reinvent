@@ -91,31 +91,27 @@ export const domain3: PropDomains[] = [
 
 export const sectorsCard = [
   {
-    role:'CMS',
+    role:'Content Management System',
     job_img: job,
     domain: domain0,
-    gradFrom:'#e4a346',
-    gradTo:'#2d6f73'
+    open_menu: true
   },
   {
     role:'Software Develpment',
     job_img: job1,
     domain: domain1,
-    gradFrom:'#3f5a87',
-    gradTo:'#ac445d'
+    open_menu: true
   },
   {
     role:'Web Design',
     job_img: 'https://cdn3d.iconscout.com/3d/premium/thumb/designer-grafico-3d-icon-png-download-4849606.png',
     domain: domain2,
-    gradFrom: '#942b3a',
-    gradTo:'#662a46'
+    open_menu: true
   },
   {
     role:'Graphic Design',
     job_img: job3,
     domain: domain3,
-    gradFrom: '#942b3a',
-    gradTo:'#662a46'
+    open_menu: true
   },
 ]
