@@ -6,6 +6,7 @@ const fontStyle = Wire_One( {weight: '400', subsets: ['latin']} )
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDown, faAngleLeft, faAngleRight, faAngleUp } from '@fortawesome/free-solid-svg-icons'
+
 import { useState } from 'react'
 import { MiniMenu } from './mini-menu'
 
@@ -18,11 +19,11 @@ export const SectorCard = (({role, job_img, domains, open_menu}: PropSectorCard)
     const styleIcons = 'w-[37.5px] h-[37.5px] flex border border-transparent flex items-center justify-center bg-[#ffffff20] cursor-pointer'
 
     return (
-        <section className='flex w-fit h-[277.5px] border-[1px] border-white/2.5 overflow-hidden shadow-xl rounded-tl-xl rounded-bl-xl'>
+        <section className='flex w-fit h-[300px] border-white/2.5 overflow-hidden shadow-xl rounded-tl-xl rounded-bl-xl'>
             <div className="relative w-[140px] bg-[#00000060]">
                 <p className={`${fontStyle.className} absolute -right-[30px] top-4 text-right text-[40px] text-[#ffffff] text-shadow-lg leading-14 font-black`}>{role}</p>
             </div>
-            <div className={`flex w-[500px] bg-[#444]`}>
+            <div className={`flex w-[490px] bg-[#444]`}>
                 <div className="relative p-4 flex-1">
                     <Image
                         src={job_img}
@@ -58,7 +59,11 @@ export const SectorCard = (({role, job_img, domains, open_menu}: PropSectorCard)
                         <FontAwesomeIcon icon={faAngleDown} size='sm' className='hover:text-white duration-300 easy-in-out'/>
                         :
                         <>
-                            <FontAwesomeIcon icon={faAngleUp} size='sm' className='hover:text-white duration-300 easy-in-out'/>
+                            <FontAwesomeIcon
+                                icon={faAngleUp}
+                                size='sm'
+                                className='hover:text-white duration-300 easy-in-out'
+                            />
                             <MiniMenu />
                         </>
                         }
