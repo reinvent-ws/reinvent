@@ -4,9 +4,9 @@ import { ButtonHover } from "./button-hover";
 import { menuList } from "../lists/all-lists";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleUser, faMoon, faSun } from "@fortawesome/free-regular-svg-icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 import { Michroma } from "next/font/google";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
 const fontStyle = Michroma( {weight: '400', subsets: ['latin-ext']});
 
 export const HeaderMain = (() => {
