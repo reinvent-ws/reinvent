@@ -2,7 +2,6 @@ import { sectorsCard } from "../lists/all-lists"
 import { ApiBG } from "./api-bg"
 import { HeaderMain } from "./header-main"
 import { SectorCard } from "./sector-card"
-import { SectionProp } from "../types/all-types"
 
 export const MainSection = (() => {
     return (

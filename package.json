@@ -14,7 +14,6 @@
     "@fortawesome/free-regular-svg-icons": "^7.2.0",
     "@fortawesome/free-solid-svg-icons": "^7.2.0",
     "@fortawesome/react-fontawesome": "^3.2.0",
-    "@fullpage/react-fullpage": "^0.1.49",
     "eslint": "^10.0.0",
     "next": "^14.2.35",
     "npm": "^11.10.0",
@@ -23,6 +22,7 @@
     "yarn": "^1.22.22"
   },
   "devDependencies": {
+    "@fullpage/react-fullpage": "^0.1.49",
     "@tailwindcss/postcss": "^4.1.18",
     "@types/node": "^20",
     "@types/react": "^18",

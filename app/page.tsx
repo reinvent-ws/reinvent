@@ -15,6 +15,7 @@ export default function Home() {
     <Fullpage
       anchors={anchors}
       navigation
+      navigationTooltips={anchors}
       credits={{ enabled: false }}
       render={_ => {
         return (
