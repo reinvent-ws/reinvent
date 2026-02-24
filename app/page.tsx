@@ -2,14 +2,17 @@
 
 import Fullpage from '@fullpage/react-fullpage'
 
-import { RepresentationSection } from './components/representation-section';
-import { ApiBG } from './components/api-bg';
-import { MainSection } from './components/main-section';
+import { RepresentationSection } from './../app/components/representation-section';
+import { MainSection } from './../app/components/main-section';
+import { ServicesSection } from './../app/components/services-section';
+import { ApiBG } from './../app/components/api-bg';
+import { GeneralSection } from './components/general-sections';
 
 
 export default function Home() {
 
-  const anchors = ['Representation Page', 'Main Page', 'About Us Page']
+  const anchors = ['Representation Page', 'Main', 'About Us', 'Contat Us']
+  const sections = [RepresentationSection, MainSection, ServicesSection, ApiBG]
 
   return (
     <Fullpage
@@ -17,21 +20,11 @@ export default function Home() {
       navigation
       navigationTooltips={anchors}
       credits={{ enabled: false }}
-      render={_ => {
-        return (
-          <>
-            <section className='section'>
-              <RepresentationSection />
-            </section>
-            <section className='section'>
-              <MainSection />
-            </section>
-            <section className='section'>
-              <ApiBG />
-            </section>
-          </>
-        );
-      }}
+      render={_ => (
+        <>
+          {sections.map((section, idx) => <GeneralSection key={idx} section={section} idx={idx} />)}
+        </>
+      )}
     />
   );
 }
