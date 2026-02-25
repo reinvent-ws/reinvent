@@ -24,7 +24,8 @@ const nextConfig = {
             'svgstack.com',
             'icon-icons.com',
             'i0.wp.com',
-            'farbodshabani.github.io'
+            'farbodshabani.github.io',
+            'static.thenounproject.com'
         ]
       },
 };

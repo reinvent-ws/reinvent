@@ -1,8 +1,8 @@
 import Image from 'next/image'
-import { PropSectorCard } from '../types/all-types'
+import { SectorCardProp } from '../types/all-types'
 
 import { Wire_One } from 'next/font/google'
-const fontStyle = Wire_One( {weight: '400', subsets: ['latin']} )
+const wireone = Wire_One( {weight: '400', subsets: ['latin']} )
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDown, faAngleLeft, faAngleRight, faAngleUp } from '@fortawesome/free-solid-svg-icons'
@@ -10,8 +10,7 @@ import { faAngleDown, faAngleLeft, faAngleRight, faAngleUp } from '@fortawesome/
 import { useState } from 'react'
 import { MiniMenu } from './mini-menu'
 
-
-export const SectorCard = (({role, job_img, domains, open_menu}: PropSectorCard) => {
+export const SectorCard = (({role, job_img, domains, open_menu}: SectorCardProp) => {
 
     const [openMiniMenu, setOpenMiniMenu] = useState<boolean>(open_menu)
 
@@ -21,7 +20,7 @@ export const SectorCard = (({role, job_img, domains, open_menu}: PropSectorCard)
     return (
         <section className='flex w-fit h-[300px] border-white/2.5 overflow-hidden shadow-xl rounded-tl-xl rounded-bl-xl'>
             <div className="relative w-[140px] bg-[#00000060]">
-                <p className={`${fontStyle.className} absolute -right-[30px] top-4 text-right text-[40px] text-[#ffffff] text-shadow-lg leading-14 font-black`}>{role}</p>
+                <p className={`${wireone.className} absolute -right-[30px] top-4 text-right text-[40px] text-[#ffffff] text-shadow-lg leading-14 font-black`}>{role}</p>
             </div>
             <div className={`flex w-[490px] bg-[#444]`}>
                 <div className="relative p-4 flex-1">

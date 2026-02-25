@@ -4,7 +4,7 @@ export interface PropDomains {
     description: string
 }
 
-export type PropSectorCard = {
+export type SectorCardProp = {
     role: string,
     job_img?: any,
     domains: PropDomains[]
