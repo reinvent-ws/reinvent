@@ -25,7 +25,12 @@ const nextConfig = {
             'icon-icons.com',
             'i0.wp.com',
             'farbodshabani.github.io',
-            'static.thenounproject.com'
+            'static.thenounproject.com',
+            'images.icon-icons.com',
+            'assets.streamlinehq.com',
+            'archive.org',
+            'avatars.githubusercontent.com',
+            'uxwing.com'
         ]
       },
 };

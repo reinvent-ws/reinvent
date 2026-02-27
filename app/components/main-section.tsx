@@ -2,9 +2,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { HeaderMain } from "./header-main"
 import { faArrowTrendUp, faBezierCurve, faCode } from "@fortawesome/free-solid-svg-icons"
 import { faLightbulb } from "@fortawesome/free-regular-svg-icons"
+import Image from "next/image"
 
 import { Kanit, Michroma } from 'next/font/google'
-import Image from "next/image"
 const kanit = Kanit( {weight: '400', subsets: ['latin']} )
 const michroma = Michroma( {weight: '400', subsets: ['latin']} )
 

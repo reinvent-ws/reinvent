@@ -1,4 +1,4 @@
-import { PropDomains } from "../types/all-types"
+import { DomainsProp } from "../types/all-types"
 
 import job from './../../public/cms-logo.png'
 import job1 from './../../public/react-programmer.png'
@@ -6,7 +6,7 @@ import job3 from './../../public/graphic-design.png'
 
 export const menuList = ['Home', 'Serviços', 'Sobre Nós', 'Contato']
 
-export const domain0: PropDomains[] = [
+export const domain0: DomainsProp[] = [
   {
     domain: 'Node.js',
     icon: 'https://cdn.iconscout.com/icon/free/png-256/free-node-js-logo-icon-svg-download-png-3030179.png',
@@ -18,6 +18,11 @@ export const domain0: PropDomains[] = [
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
   },
   {
+    domain: 'Fastify',
+    icon: 'https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/logos/fastify-9nx5re1pt450uqxmih0n3.png/fastify-1e90xtotg592ebctdnzdla.png?_a=DATAiZAAZAA0',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+  },
+  {
     domain: 'Swagger',
     icon: 'https://svgstack.com/media/img/swagger-logo-xTUe014050.webp',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
@@ -26,10 +31,15 @@ export const domain0: PropDomains[] = [
     domain: 'JSON',
     icon: 'https://i0.wp.com/chewbii.com/wp-content/uploads/2015/11/json-logo.png?fit=650%2C650&ssl=1',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+  },
+  {
+    domain: 'Postman',
+    icon: 'https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/postman-icon.png',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
   }
 ]
 
-export const domain1: PropDomains[] = [
+export const domain1: DomainsProp[] = [
   {
     domain: 'React',
     icon: 'https://www.golden-team.org/static/services/reactjs.webp',
@@ -41,6 +51,11 @@ export const domain1: PropDomains[] = [
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
   },
   {
+    domain: 'Angular',
+    icon: 'https://images.icon-icons.com/2699/PNG/512/angular_logo_icon_169595.png',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+  },
+  {
     domain: 'Typescript',
     icon: 'https://cdn-icons-png.flaticon.com/256/5968/5968381.png',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
@@ -49,10 +64,20 @@ export const domain1: PropDomains[] = [
     domain: 'Javascript',
     icon: 'https://cdn.iconscout.com/icon/free/png-256/free-javascript-logo-icon-svg-download-png-2284965.png?f=webp',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+  },
+  {
+    domain: 'Tailwind Css',
+    icon: 'https://archive.org/download/github.com-tailwindlabs-tailwindcss_-_2021-12-11_12-43-41/cover.jpg',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+  },
+  {
+    domain: 'Styled Components',
+    icon: 'https://avatars.githubusercontent.com/u/20658825?s=200&v=4',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
   }
 ]
 
-export const domain2: PropDomains[] = [
+export const domain2: DomainsProp[] = [
   {
     domain: 'Figma',
     icon: 'https://cdn-icons-png.flaticon.com/256/5968/5968705.png',
@@ -70,7 +95,7 @@ export const domain2: PropDomains[] = [
   }
 ]
 
-export const domain3: PropDomains[] = [
+export const domain3: DomainsProp[] = [
 
   {
     domain: 'Adobe Illustrator',
@@ -85,6 +110,16 @@ export const domain3: PropDomains[] = [
   {
     domain: 'Corel Draw',
     icon: 'https://cdn-public.softwarereviews.com/production/favicons/offerings/2092/original/Download-CorelDRAW-Graphics-Suite-2023-v24.4.0.636.png',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do elusmod'
+  },
+  {
+    domain: '3D Studio_Max',
+    icon: 'https://images.icon-icons.com/195/PNG/256/3ds_Max_23640.png',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do elusmod'
+  },
+  {
+    domain: 'Blender',
+    icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Blender_logo_no_text.svg/960px-Blender_logo_no_text.svg.png',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do elusmod'
   }
 ]
