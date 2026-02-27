@@ -28,31 +28,36 @@ export const domain0: DomainsProp[] = [
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
   },
   {
-    domain: 'JSON',
-    icon: 'https://i0.wp.com/chewbii.com/wp-content/uploads/2015/11/json-logo.png?fit=650%2C650&ssl=1',
+    domain: 'Sanity',
+    icon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxNBM-OibWMfd4NjKStb1NfmwnxKbMhZ6N2A&s',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+  },
+  {
+    domain: 'Strapi',
+    icon: 'https://super-static-assets.s3.amazonaws.com/e7c0f16c-8bd3-4c76-8075-4c86f986e1b2/uploads/favicon/9c68ae10-0a8a-4e3f-9084-3625b19df9cb.png',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
   },
   {
     domain: 'Postman',
     icon: 'https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/postman-icon.png',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
-  }
+  },
 ]
 
 export const domain1: DomainsProp[] = [
   {
-    domain: 'React',
-    icon: 'https://www.golden-team.org/static/services/reactjs.webp',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
-  },
-  {
-    domain: 'React Native',
+    domain: 'React e React_Native',
     icon: 'https://www.golden-team.org/static/services/reactjs.webp',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
   },
   {
     domain: 'Angular',
     icon: 'https://images.icon-icons.com/2699/PNG/512/angular_logo_icon_169595.png',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+  },
+  {
+    domain: 'Next.js',
+    icon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV9uzErWz9EXqZDxZ5lP9aYpMz8eK6rr5X3w&s',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
   },
   {
@@ -71,8 +76,8 @@ export const domain1: DomainsProp[] = [
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
   },
   {
-    domain: 'Styled Components',
-    icon: 'https://avatars.githubusercontent.com/u/20658825?s=200&v=4',
+    domain: 'Shadcn UI',
+    icon: 'https://avatars.githubusercontent.com/u/139895814?s=280&v=4',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
   }
 ]

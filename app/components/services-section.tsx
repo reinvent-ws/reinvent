@@ -11,8 +11,8 @@ export const ServicesSection = (() => {
 
     return (
         // <section className={`relative flex bg-no-repeat bg-cover bg-left min-h-screen flex-col items-center bg-linear-to-tl from-gray-500 to-[#1a1a1a]`}>
-        <section className={`relative flex bg-no-repeat min-h-screen flex-col items-center bg-[url(https://images.unsplash.com/photo-1771226281112-b7119ef4112e?q=80&w=1160&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)] bg-cover bg-center`}>
-            <div className={`relative flex-col flex-1 gap-24 max-sm:px-[20px] max-lg:px-[60px] px-[200px] py-10 w-full text-sm lg:flex items-center overflow-hidden backdrop-blur-3xl text-white bg-no-repeat bg-center-top bg-auto`}>
+        <section className={`relative flex bg-no-repeat min-h-screen flex-col items-center bg-[url(https://basicappleguy.com/s/F01_Mac.png)] bg-cover bg-center rotate-180`}>
+            <div className={`relative flex-col flex-1 gap-24 max-sm:px-[20px] max-lg:px-[60px] px-[200px] py-10 w-full text-sm lg:flex items-center overflow-hidden  text-white bg-no-repeat bg-center-top bg-auto rotate-180`}>
                 <HeaderMain />
                 <section className="w-full flex flex-col gap-8">
                     <div className={`${kanit.className} text-[20px] flex gap-10`}>

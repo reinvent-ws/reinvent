@@ -2,7 +2,7 @@ import Image from "next/image";
 import logo from './../../public/logo-reinvent.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faTerminal } from "@fortawesome/free-solid-svg-icons";
-import { faRegistered } from "@fortawesome/free-regular-svg-icons";
+import { faCopyright, faRegistered } from "@fortawesome/free-regular-svg-icons";
 
 import { Michroma } from "next/font/google";
 import { M_PLUS_Code_Latin } from "next/font/google";
@@ -33,7 +33,7 @@ export const RepresentationSection = (()=> {
             <p className={`${fontStyle1.className} tracking-[9.2px]`}> criar | desenvolver | evoluir</p>
         </div>
         <div className="flex items-center mt-30 z-2">
-            <FontAwesomeIcon icon={faRegistered} size="xs" />
+            <FontAwesomeIcon icon={faCopyright} size="xs" />
             <p className="mx-4 text-">2026</p>
         </div>
       </section>

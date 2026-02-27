@@ -29,8 +29,12 @@ const nextConfig = {
             'images.icon-icons.com',
             'assets.streamlinehq.com',
             'archive.org',
-            'avatars.githubusercontent.com',
-            'uxwing.com'
+            'uxwing.com',
+            'brandlogos.net',
+            'w7.pngwing.com',
+            'images.seeklogo.com',
+            'super-static-assets.s3.amazonaws.com',
+            'avatars.githubusercontent.com'
         ]
       },
 };
