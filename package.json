@@ -10,6 +10,9 @@
     "backend": "tsx watch app/backend/server.ts"
   },
   "dependencies": {
+    "@fastify/cors": "^11.2.0",
+    "@fastify/swagger": "^9.7.0",
+    "@fastify/swagger-ui": "^5.2.5",
     "@fortawesome/fontawesome-svg-core": "^7.2.0",
     "@fortawesome/free-brands-svg-icons": "^7.2.0",
     "@fortawesome/free-regular-svg-icons": "^7.2.0",
@@ -17,11 +20,13 @@
     "@fortawesome/react-fontawesome": "^3.2.0",
     "eslint": "^10.0.0",
     "fastify": "^5.7.4",
+    "fastify-type-provider-zod": "^6.1.0",
     "next": "^14.2.35",
     "npm": "^11.10.0",
     "react": "^18",
     "react-dom": "^18",
-    "yarn": "^1.22.22"
+    "yarn": "^1.22.22",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
     "@fullpage/react-fullpage": "^0.1.49",
