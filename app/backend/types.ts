@@ -18,5 +18,7 @@ export type User = {
 export type Service = {
     id: string,
     name_service: string,
-    url: string
+    url: string,
+    domain: string,
 }
+

@@ -5,7 +5,7 @@ import { fastifySwagger} from '@fastify/swagger'
 import fastifySwaggerUi from '@fastify/swagger-ui'
 import { routes } from './routes/routes'
 
-export const app = fastify()
+export const app = fastify({ logger: true })
 
 
 app.setValidatorCompiler(validatorCompiler)

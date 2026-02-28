@@ -13,7 +13,8 @@ export async function servicesCRUD(app: FastifyTypeInstance) {
                 200: z.array(z.object({
                     id: z.string(),
                     name_service: z.string(),
-                    url: z.string()
+                    url: z.string(),
+                    domain: z.string()
                 }))
             }
         }
@@ -25,27 +26,27 @@ export async function servicesCRUD(app: FastifyTypeInstance) {
         schema: {
             description: 'Create a new services',
             tags: ['services'],
-            body: z.object({
+            body: z.array(z.object({
                 name_service: z.string(),  
                 url: z.string().url(),
-
-            }),
+                domain: z.string()
+            })),
             response: {
                 201: z.null().describe('Service created')
             }
         }
     }, async (request, reply) => {
-        const { name_service, url } = request.body
-
-        services.push({
-            id: randomUUID(),
-            name_service,
-            url
-        })
-
+        for (const { name_service, url, domain } of request.body) {
+            services.push({
+                id: randomUUID(),
+                name_service,
+                url,
+                domain
+            });
+        }
         return reply.status(201).send(null)
     })
-
+    
     app.delete('/services', {
         schema: {
             description: 'Remove a service',
