@@ -5,17 +5,19 @@ import { randomUUID } from "crypto";
 const services: Service[] = []
 
 export async function servicesCRUD(app: FastifyTypeInstance) {
+
+    const setBody = z.array(z.object({
+        name_service: z.string(),  
+        url: z.string().url(),
+        domain: z.string()
+    }))
+
     app.get('/services', {
         schema: {
             description: 'List services',
             tags: ['services'],
             response: {
-                200: z.array(z.object({
-                    id: z.string(),
-                    name_service: z.string(),
-                    url: z.string(),
-                    domain: z.string()
-                }))
+                200: setBody
             }
         }
     }, () => {
@@ -26,11 +28,7 @@ export async function servicesCRUD(app: FastifyTypeInstance) {
         schema: {
             description: 'Create a new services',
             tags: ['services'],
-            body: z.array(z.object({
-                name_service: z.string(),  
-                url: z.string().url(),
-                domain: z.string()
-            })),
+            body: setBody,
             response: {
                 201: z.null().describe('Service created')
             }
