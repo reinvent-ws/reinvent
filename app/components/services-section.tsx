@@ -7,11 +7,11 @@ const kanit = Kanit( {weight: '400', subsets: ['latin']} )
 
 export const ServicesSection = (() => {
 
-    const img: any = ''
+    const img: any = 'https://basicappleguy.com/s/F01_Mac.png'
 
     return (
-        <section className={`relative flex bg-no-repeat min-h-screen flex-col items-center bg-[url(https://basicappleguy.com/s/F01_Mac.png)] bg-cover bg-center rotate-180`}>
-            <div className={`relative flex-col flex-1 gap-24 max-sm:px-[20px] max-lg:px-[60px] px-[200px] py-10 w-full text-sm lg:flex items-center overflow-hidden  text-white bg-no-repeat bg-center-top bg-auto rotate-180`}>
+        <section className={`relative flex bg-no-repeat min-h-screen flex-col items-center bg-[url(${img})] bg-cover bg-center rotate-180`}>
+            <div className={`relative flex-col flex-1 gap-24 max-sm:px-[20px] max-lg:px-[60px] px-[200px] py-10 w-full text-sm backdrop-blur-xl lg:flex items-center overflow-hidden text-white bg-no-repeat bg-center-top bg-auto rotate-180`}>
                 <HeaderMain />
                 <section className="w-full flex flex-col gap-8">
                     <div className={`${kanit.className} text-[20px] flex gap-10`}>

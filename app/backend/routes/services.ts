@@ -8,7 +8,7 @@ export async function servicesCRUD(app: FastifyTypeInstance) {
 
     const setBody = z.array(z.object({
         name_service: z.string(),  
-        url: z.string().url(),
+        url: z.string(),
         domain: z.string()
     }))
 
@@ -44,6 +44,21 @@ export async function servicesCRUD(app: FastifyTypeInstance) {
         }
         return reply.status(201).send(null)
     })
+
+    app.addContentTypeParser('application/json', { parseAs: 'string' }, function (req, body, done) {
+        try {
+          // If the body is empty, return an empty object or handle as needed
+          if (!body) {
+            return done(null, {});
+          }
+          // Ensure body is a string before parsing
+          const json = JSON.parse(typeof body === 'string' ? body : body.toString());
+          done(null, json);
+        } catch (err) {
+            (err as any).statusCode = 400
+            done(err as any, undefined)
+        }
+      })
     
     app.delete('/services', {
         schema: {

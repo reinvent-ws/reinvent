@@ -22,7 +22,7 @@ export const SectorCard = (({role, job_img, domains, open_menu}: SectorCardProp)
             <div className="relative w-[145px] bg-[#00000025] backdrop-blur-3xl z-9">
                 <p className={`${wireone.className} absolute -right-[30px] top-4 text-right text-[40px] text-[#ffffff] text-shadow-lg leading-14 font-black`}>{role}</p>
             </div>
-            <div className={`relative flex w-[495px] bg-[#00000050] backdrop-blur z-0`}>
+            <div className={`relative flex w-[495px] bg-[#00000050] z-0`}>
                 <div className="relative p-4 flex-1">
                     <Image
                         src={job_img}
@@ -33,7 +33,7 @@ export const SectorCard = (({role, job_img, domains, open_menu}: SectorCardProp)
                     />
                     <div className="absolute -bottom-[29%] left-0 h-[175px] border-transparent flex gap-[20px] w-full cursor-pointer z-9">
                         {domains.map((domain, idx) => (
-                            <section key={idx} className={`group/item relative h-[300px] text-[10px] -top-5 -left-12 hover:-top-25 hover:left-[32px] duration-300 ease-in-out rotate-45 rounded-t-full overflow-hidden border border-white/25 bg-[#ffffff25]`}>
+                            <section key={idx} className={`group/item relative h-[300px] text-[10px] -top-5 -left-12 hover:-top-25 hover:left-[32px] duration-300 ease-in-out rotate-45 rounded-t-full overflow-hidden border border-white/25 bg-[#ffffff25] backdrop-blur-3xl`}>
                                 <Image
                                     src={domain.icon}
                                     alt=''
