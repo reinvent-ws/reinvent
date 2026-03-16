@@ -64,8 +64,20 @@ export async function servicesCRUD(app: FastifyTypeInstance) {
         schema: {
             description: 'Remove a service',
             tags: ['services'],
+            body: z.array(z.object({
+                id: z.string()
+            })),
+            response: {
+                204: z.null().describe('Service removed')
+            }
         }
-    }, () => {
-        return {}
+    }, async (request, reply) => {
+        for (const { id } of request.body as any) {
+            const index = services.findIndex(service => service.id === id);
+            if (index !== -1) {
+                services.splice(index, 1);
+            }
+        }
+        return reply.status(204).send(null)
     })
 }
