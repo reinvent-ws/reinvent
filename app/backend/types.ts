@@ -9,13 +9,20 @@ export type FastifyTypeInstance = FastifyInstance<
     ZodTypeProvider
 >
 
-export type User = {
+export type UserProps = {
     id: string,
     name: string,
     email: string
 }
 
-export type Service = {
+export type SectorCardProps = {
+    id: string,
+    job_img: string,
+    domain: string,
+    open_menu: boolean,
+}
+
+export type ServiceProps = {
     id: string,
     name_service: string,
     url: string,

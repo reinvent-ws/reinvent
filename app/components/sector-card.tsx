@@ -7,10 +7,27 @@ const wireone = Wire_One( {weight: '400', subsets: ['latin']} )
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDown, faAngleLeft, faAngleRight, faAngleUp } from '@fortawesome/free-solid-svg-icons'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { MiniMenu } from './mini-menu'
+import axios from 'axios'
+import { ServiceProps } from '../backend/types'
 
 export const SectorCard = (({role, job_img, domains, open_menu}: SectorCardProp) => {
+    const [domain, setDomain] = useState<[]>([])
+
+    useEffect(()=>{
+        const fetchData = async () => {
+            try {
+                const response = await axios.get('http://localhost:3333/services')
+                setDomain(response.data)
+            } catch(err: any) {
+                console.log(err)
+            }
+
+        }
+        fetchData()
+
+    }, [])
 
     const [openMiniMenu, setOpenMiniMenu] = useState<boolean>(open_menu)
 
@@ -32,16 +49,17 @@ export const SectorCard = (({role, job_img, domains, open_menu}: SectorCardProp)
                         className='absolute bottom-4 left-10 grayscale opacity-15'
                     />
                     <div className="absolute -bottom-[29%] left-0 h-[175px] border-transparent flex gap-[20px] w-full cursor-pointer z-9">
-                        {domains.map((domain, idx) => (
+                        {domain.map((domain: ServiceProps, idx) => (
+                            (domain.domain == role) && 
                             <section key={idx} className={`group/item relative h-[300px] text-[10px] -top-5 -left-12 hover:-top-25 hover:left-[32px] duration-300 ease-in-out rotate-45 rounded-t-full overflow-hidden border border-white/25 bg-[#ffffff25] backdrop-blur-3xl`}>
                                 <Image
-                                    src={domain.icon}
+                                    src={domain.url}
                                     alt=''
                                     width={32}
                                     height={32}
-                                    className={`relative ${(domain.domain == 'Express' || domain.domain == 'Figma'|| domain.domain == 'Corel Draw') && 'top-[6px] p-[2px]'} grayscale group-hover/item:grayscale-0 group-hover/item:-rotate-90 duration-300 ease-in-out`}
+                                    className={`relative ${(domain.name_service == 'Express' || domain.name_service == 'Figma'|| domain.name_service == 'Corel Draw') && 'top-[6px] p-[2px]'} grayscale group-hover/item:grayscale-0 group-hover/item:-rotate-90 duration-300 ease-in-out`}
                                 />
-                                <p className='absolute top-[30%] left-[50%] -translate-[50%] text-white/75 -rotate-90 tracking-widest'>{domain.domain.toUpperCase()}</p>
+                                <p className='absolute top-[30%] left-[50%] -translate-[50%] text-white/75 -rotate-90 tracking-widest'>{domain.name_service.toUpperCase()}</p>
                             </section>
                         ))}
                     </div>

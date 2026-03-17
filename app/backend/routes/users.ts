@@ -1,8 +1,8 @@
-import { FastifyTypeInstance, User } from "../types";
+import { FastifyTypeInstance, UserProps } from "../types";
 import z from "zod";
 import { randomUUID } from "crypto";
 
-const users: User[] =  []
+const users: UserProps[] =  []
 
 export async function usersCRUD(app: FastifyTypeInstance) {
     app.get('/users', {
