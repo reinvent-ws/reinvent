@@ -12,7 +12,7 @@ import { MiniMenu } from './mini-menu'
 import axios from 'axios'
 import { ServiceProps } from '../backend/types'
 
-export const SectorCard = (({role, job_img, domains, open_menu}: SectorCardProp) => {
+export const SectorCard = (({role, job_img, open_menu}: SectorCardProp) => {
     const [domain, setDomain] = useState<[]>([])
 
     useEffect(()=>{
@@ -21,12 +21,10 @@ export const SectorCard = (({role, job_img, domains, open_menu}: SectorCardProp)
                 const response = await axios.get('http://localhost:3333/services')
                 setDomain(response.data)
             } catch(err: any) {
-                console.log(err)
+                console.log(err.message)
             }
-
         }
         fetchData()
-
     }, [])
 
     const [openMiniMenu, setOpenMiniMenu] = useState<boolean>(open_menu)

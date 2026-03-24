@@ -17,8 +17,8 @@ export type UserProps = {
 
 export type SectorCardProps = {
     id: string,
+    role: string,
     job_img: string,
-    domain: string,
     open_menu: boolean,
 }
 

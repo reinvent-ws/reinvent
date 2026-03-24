@@ -7,7 +7,7 @@ export interface DomainsProp {
 
 export type SectorCardProp = {
     role: string,
-    job_img?: any,
-    domains: DomainsProp[]
+    job_img: any,
+    domains?: DomainsProp[]
     open_menu: boolean
 }

@@ -34,7 +34,8 @@ const nextConfig = {
             'w7.pngwing.com',
             'images.seeklogo.com',
             'super-static-assets.s3.amazonaws.com',
-            'avatars.githubusercontent.com'
+            'avatars.githubusercontent.com',
+            'www.clipartmax.com'
         ]
       },
 };
